@@ -1,28 +1,29 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
+    <div @click="showPicker = !showPicker">切换pop</div>
+    <!-- <vantMultSelect :showPicker="showPicker"></vantMultSelect> -->
+    <abc :showPicker="showPicker"></abc>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import "vant-mult-select/dist/vant-mult-select.css"
+// import vantMultSelect from './components/vant-mult-select.vue';
+import abc from 'vant-mult-select'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // vantMultSelect,
+    abc
+  },
+  data() {
+    return {
+      showPicker: false
+    }
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>

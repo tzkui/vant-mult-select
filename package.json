@@ -1,14 +1,21 @@
 {
   "name": "vant-mult-select",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.1.0",
+  "private": false,
+  "main": "./dist/vant-mult-select.common.js",
+  "files": [
+    "dist/*"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "package": "vue-cli-service build --target lib --name vant-mult-select ./src/components/vant-mult-select.vue"
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "vant": "^2.12.54",
+    "vant-mult-select": "^1.1.0",
     "vue": "^2.6.14"
   },
   "devDependencies": {
